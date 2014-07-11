@@ -33,9 +33,3 @@ sudo /bin/rpm --quiet -U /tmp/libselinux-*.rpm /tmp/openssh-*.rpm
 rm /tmp/libselinux-*.rpm /tmp/openssh-*.rpm
 exit
 ```
-
-出来上がった box を利用すると、vagrant halt が sudo バージョンの影響で利用できないので下記で対応。
-
-```
-vagrant ssh dns -- 'sudo /sbin/shutdown -h now && echo halt'
-```
